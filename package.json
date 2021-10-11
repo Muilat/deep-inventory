@@ -11,12 +11,14 @@
       "lint:all": "yarn lint && yarn tscCheck",
       "lint:fx": "eslint src/**/*.ts --fix",
       "lint": "eslint src/**/*.ts",
-      "start": "node --loader ts-node/esm src/server.ts",
+      "start": "node  build/src/server.ts",
+      "postinstall": "tsc",
       "server": "ts-node src/server.ts",
       "tsc": "tsc",
       "tscCheck": "tsc --noEmit",
       "serve": "nodemon src/server.ts",
-      "test": "jest -i --colors --verbose --detectOpenHandles  --watchAll"
+      "test": "jest -i --colors --verbose --detectOpenHandles  --watchAll",
+      "deploy": "git add . && git commit -m Heroku && git push heroku master"
    },
    "repository": {
       "type": "git",
