@@ -1,0 +1,25 @@
+module.exports = (sequelize: any, Sequelize : any) => {
+    const TIMESTAMP = require('sequelize-mysql-timestamp')(sequelize);
+    const Item = sequelize.define("Item", {
+      validTill: {
+        type: TIMESTAMP,
+        allowNull: false
+    },
+      quantity: {
+        type: Sequelize.NUMBER,
+        allowNull: false
+      },
+      createdAt:{
+          type: TIMESTAMP,
+          defaultValue: sequelize.literal('CURRENT_TIMESTAMP'),
+          allowNull: false
+      },
+      updatedAt:{
+          type: 'TIMESTAMP',
+          defaultValue: sequelize.literal('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'),
+          allowNull: false
+      }
+    });
+  
+    return Item;
+  };
