@@ -16,6 +16,7 @@
       "server": "ts-node src/server.ts",
       "tsc": "tsc",
       "tscCheck": "tsc --noEmit",
+      "serve": "nodemon src/server.ts",
       "test": "jest -i --colors --verbose --detectOpenHandles  --watchAll",
       "deploy": "git add . && git commit -m Heroku && git push heroku master"
    },
@@ -89,5 +90,8 @@
    "type": "module",
    "engines": {
       "node": "12.x"
+   },
+   "optionalDependencies": {
+      "fsevents": "^2.3.2"
    }
 }
