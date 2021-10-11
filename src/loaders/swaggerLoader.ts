@@ -1,4 +1,3 @@
-import { defaultMetadataStorage as classTransformerMetadataStorage } from 'class-transformer/storage';
 import { getFromContainer, MetadataStorage } from 'class-validator';
 import { validationMetadatasToSchemas, validationMetadataArrayToSchemas } from 'class-validator-jsonschema';
 import { MicroframeworkLoader, MicroframeworkSettings } from 'microframework-w3tec';
