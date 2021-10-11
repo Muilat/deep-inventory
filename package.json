@@ -16,7 +16,6 @@
       "server": "ts-node src/server.ts",
       "tsc": "tsc",
       "tscCheck": "tsc --noEmit",
-      "serve": "nodemon src/server.ts",
       "test": "jest -i --colors --verbose --detectOpenHandles  --watchAll",
       "deploy": "git add . && git commit -m Heroku && git push heroku master"
    },
