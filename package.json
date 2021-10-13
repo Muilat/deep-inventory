@@ -11,7 +11,7 @@
       "lint:all": "yarn lint && yarn tscCheck",
       "lint:fx": "eslint src/**/*.ts --fix",
       "lint": "eslint src/**/*.ts",
-      "start": "node  build/src/server.ts",
+      "start": "node  build/src/server.js",
       "postinstall": "tsc",
       "server": "ts-node src/server.ts",
       "tsc": "tsc",
